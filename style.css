@@ -25,7 +25,7 @@
 }
 .head{
     background: linear-gradient(rgb(131, 41, 5), rgb(155, 103, 69));
-    border: 2px gray;
+    border: 2px solid gray;
     border-radius: 30px;
 }
 .snake{
