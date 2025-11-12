@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snake Game</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Snake Game — Final</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -53,34 +53,15 @@
       </div>
     </main>
 
-    <!-- Start overlay -->
-    <div id="overlayStart" class="overlay">
-      <div class="card">
-        <h1>Snake Game</h1>
-        <p>Eat foods of different colors for more points!<br>Use arrow keys, swipe, or on-screen buttons.</p>
-        <label>Player name: <input id="playerName" placeholder="Your name"></label>
-        <div class="actions">
-          <button id="overlayStartBtn" class="btn primary">Start Game</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Game over overlay -->
-    <div id="overlayGameOver" class="overlay hidden">
-      <div class="card">
-        <h1>Game Over</h1>
-        <p id="finalScore">Score: 0</p>
-        <div class="actions">
-          <button id="tryAgainBtn" class="btn primary">Play Again</button>
-          <button id="goHomeBtn" class="btn">Home</button>
-        </div>
-      </div>
-    </div>
-
     <footer class="footer">© Snake Game — HTML • CSS • JS</footer>
+
+    <!-- mobile menu container (populated by JS) -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true"></div>
   </div>
 
-  <div class="side-art"></div>
+  <!-- right-side decorative image -->
+  <div class="side-art" aria-hidden="true"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
