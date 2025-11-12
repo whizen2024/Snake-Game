@@ -7,7 +7,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;}
 body{
-  background: linear-gradient(135deg, #e1f0ff, #f8ffff);
+  /* background: linear-gradient(135deg, #e1f0ff, #f8ffff); */
   background-image: url("assets/img.jpg");
   background-size: cover;
   background-position: center;
@@ -157,3 +157,4 @@ select{
   .mobile-controls{display:block}
   .topbar{flex-direction:column;align-items:flex-start}
 }
+
