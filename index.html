@@ -3,39 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Snake Game — Final</title>
+  <title>Advanced Snake Game</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="app" id="appRoot">
     <header class="topbar">
-      <div class="left-col">
-        <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
-        <div class="brand">🐍 Snake Game</div>
-      </div>
+      <div class="brand">🐍 Snake Game</div>
 
-      <div class="score-area" id="scoreArea">
+      <div class="score-area">
         <div id="scoreBox">Score: 0</div>
         <div id="highScore">High: 0</div>
       </div>
 
-      <div class="controls-wrap" id="controlsWrap">
-        <div class="controls">
-          <button id="startBtn" class="btn primary">Start</button>
-          <button id="pauseBtn" class="btn">Pause</button>
-          <button id="restartBtn" class="btn">Restart</button>
-          <button id="muteBtn" class="btn">Mute</button>
-          <label>
-            Difficulty:
-            <select id="difficulty">
-              <option value="easy">Easy</option>
-              <option value="medium" selected>Medium</option>
-              <option value="hard">Hard</option>
-            </select>
-          </label>
-          <button id="fsBtn" class="btn">Fullscreen</button>
-        </div>
+      <div class="controls">
+        <button id="startBtn" class="btn primary">Start</button>
+        <button id="pauseBtn" class="btn">Pause</button>
+        <button id="restartBtn" class="btn">Restart</button>
+        <button id="muteBtn" class="btn">Mute</button>
+
+        <label>
+          Difficulty:
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+
+        <button id="fsBtn" class="btn">Fullscreen</button>
       </div>
     </header>
 
@@ -53,14 +50,32 @@
       </div>
     </main>
 
+    <!-- Start overlay -->
+    <div id="overlayStart" class="overlay">
+      <div class="card">
+        <h1>Snake Game</h1>
+        <p>Eat foods of different colors for more points!<br>Use arrow keys, swipe, or on-screen buttons.</p>
+        <label>Player name: <input id="playerName" placeholder="Your name"></label>
+        <div class="actions">
+          <button id="overlayStartBtn" class="btn primary">Start Game</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game over overlay -->
+    <div id="overlayGameOver" class="overlay hidden">
+      <div class="card">
+        <h1>Game Over</h1>
+        <p id="finalScore">Score: 0</p>
+        <div class="actions">
+          <button id="tryAgainBtn" class="btn primary">Play Again</button>
+          <button id="goHomeBtn" class="btn">Home</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">© Snake Game — HTML • CSS • JS</footer>
-
-    <!-- mobile menu container (populated by JS) -->
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true"></div>
   </div>
-
-  <!-- right-side decorative image -->
-  <div class="side-art" aria-hidden="true"></div>
 
   <script src="script.js"></script>
 </body>
