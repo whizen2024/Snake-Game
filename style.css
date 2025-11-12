@@ -4,7 +4,7 @@
 html,body{height:100%;}
 body{
   /* background can be the decorative image + gradient */
-  background: linear-gradient(135deg, #e1f0ff, #f8ffff);
+  /* background: linear-gradient(135deg, #e1f0ff, #f8ffff); */
   background-image: url("assets/img.jpg");
   background-size: cover;
   background-position: center;
@@ -204,5 +204,6 @@ select{
     grid-template-columns: repeat(18,1fr);
   }
 }
+
 
 
