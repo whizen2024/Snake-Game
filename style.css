@@ -109,27 +109,15 @@ select{
 /* snake + foods */
 /* Make snake segments and food centered and square inside each grid cell */
 
-/* Snake styling */
 .head {
   place-self: center;
   width: 90%;
-  height: 70%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 50% 50% 40% 40%;
+  height: 65%;
+  display: block;
+  border-radius: 45% 45% 35% 35%; /* rounded top, slightly flatter bottom */
   background-color: #ff6600;
   border: 2px solid #cc5200;
-  position: relative;
 }
-.head::before, .head::after {
-  content: "";
-  width: 15%;
-  height: 15%;
-  background: #000;
-  border-radius: 50%;
-}
-
 
 .snake {
   place-self: center;
@@ -236,6 +224,7 @@ select{
     grid-template-columns: repeat(18,1fr);
   }
 }
+
 
 
 
