@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Snake — MultiFood & Themes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <title>Advanced Snake Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app" id="appRoot" data-theme="theme-default">
+  <div class="app" id="appRoot">
     <header class="topbar">
-      <div class="brand">Snake</div>
+      <div class="brand">🐍 Snake Game</div>
 
       <div class="score-area">
         <div id="scoreBox">Score: 0</div>
@@ -23,21 +23,12 @@
         <button id="restartBtn" class="btn">Restart</button>
         <button id="muteBtn" class="btn">Mute</button>
 
-        <label class="select-wrap">
+        <label>
+          Difficulty:
           <select id="difficulty">
             <option value="easy">Easy</option>
             <option value="medium" selected>Medium</option>
             <option value="hard">Hard</option>
-          </select>
-        </label>
-
-        <label class="select-wrap">
-          <select id="themeSelect">
-            <option value="theme-default">Default</option>
-            <option value="theme-dark">Dark</option>
-            <option value="theme-neon">Neon</option>
-            <option value="theme-forest">Forest</option>
-            <option value="theme-retro">Retro</option>
           </select>
         </label>
 
@@ -62,18 +53,16 @@
     <!-- Start overlay -->
     <div id="overlayStart" class="overlay">
       <div class="card">
-        <h1>Snake</h1>
-        <p>Multiple foods, selectable themes & difficulty. Use arrow keys, swipe, or on-screen buttons.</p>
-        <label>Player name:
-          <input id="playerName" placeholder="Your name">
-        </label>
+        <h1>Snake Game</h1>
+        <p>Eat foods of different colors for more points!<br>Use arrow keys, swipe, or on-screen buttons.</p>
+        <label>Player name: <input id="playerName" placeholder="Your name"></label>
         <div class="actions">
           <button id="overlayStartBtn" class="btn primary">Start Game</button>
         </div>
       </div>
     </div>
 
-    <!-- Game over -->
+    <!-- Game over overlay -->
     <div id="overlayGameOver" class="overlay hidden">
       <div class="card">
         <h1>Game Over</h1>
@@ -85,7 +74,7 @@
       </div>
     </div>
 
-    <footer class="footer">Responsive — Multiple foods, themes & difficulty</footer>
+    <footer class="footer">© Snake Game — HTML • CSS • JS</footer>
   </div>
 
   <script src="script.js"></script>
