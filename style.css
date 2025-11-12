@@ -1,17 +1,14 @@
-:root{
-  --board-size: min(86vmin, 640px);
-  --grid: 18;
-  --font: 'Montserrat', sans-serif;
-}
+/* --- Direct-size version (no :root variables) --- */
 
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;}
 body{
+  /* background can be the decorative image + gradient */
   background: linear-gradient(135deg, #e1f0ff, #f8ffff);
   background-image: url("assets/img.jpg");
   background-size: cover;
   background-position: center;
-  font-family: var(--font);
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -26,6 +23,7 @@ body::before{
   pointer-events:none;
 }
 
+/* app container */
 .app{
   width:100%;
   max-width:1100px;
@@ -35,6 +33,7 @@ body::before{
   box-shadow:0 12px 36px rgba(0,0,0,0.15);
 }
 
+/* top bar */
 .topbar{
   display:flex;
   justify-content:space-between;
@@ -50,6 +49,7 @@ body::before{
   color:#0077ff;
 }
 
+/* score area */
 .score-area{display:flex;gap:0.5rem}
 #scoreBox,#highScore{
   background:#fff;
@@ -59,6 +59,7 @@ body::before{
   box-shadow:0 4px 12px rgba(0,0,0,0.06);
 }
 
+/* controls */
 .controls{
   display:flex;
   flex-wrap:wrap;
@@ -85,13 +86,14 @@ select{
   font-weight:600;
 }
 
-/* board */
+/* board (direct sizes used) */
+/* board is 18 x 18 grid; size uses min(86vmin, 640px) */
 .board{
-  width:var(--board-size);
-  height:var(--board-size);
+  width: min(86vmin, 640px);
+  height: min(86vmin, 640px);
   display:grid;
-  grid-template-rows: repeat(var(--grid),1fr);
-  grid-template-columns: repeat(var(--grid),1fr);
+  grid-template-rows: repeat(18,1fr);
+  grid-template-columns: repeat(18,1fr);
   background: linear-gradient(180deg,#b3e5ff,#e8ffff);
   border-radius:10px;
   box-shadow:0 10px 30px rgba(0,0,0,0.1);
@@ -152,8 +154,15 @@ select{
   color:#555;
 }
 
+/* responsive: on small screens use smaller board size (min(80vmin,520px)) */
 @media(max-width:720px){
-  :root{--board-size:min(80vmin,520px);}
   .mobile-controls{display:block}
   .topbar{flex-direction:column;align-items:flex-start}
+
+  .board{
+    width: min(80vmin, 520px);
+    height: min(80vmin, 520px);
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+  }
 }
