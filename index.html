@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Advanced Snake Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="app" id="appRoot">
     <header class="topbar">
-      <div class="brand">🐍 Snake Game</div>
+      <div class="left-col">
+        <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+        <div class="brand">🐍 Snake Game</div>
+      </div>
 
-      <div class="score-area">
+      <div class="score-area" id="scoreArea">
         <div id="scoreBox">Score: 0</div>
         <div id="highScore">High: 0</div>
       </div>
 
-      <div class="controls">
-        <button id="startBtn" class="btn primary">Start</button>
-        <button id="pauseBtn" class="btn">Pause</button>
-        <button id="restartBtn" class="btn">Restart</button>
-        <button id="muteBtn" class="btn">Mute</button>
-
-        <label>
-          Difficulty:
-          <select id="difficulty">
-            <option value="easy">Easy</option>
-            <option value="medium" selected>Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-        </label>
-
-        <button id="fsBtn" class="btn">Fullscreen</button>
+      <div class="controls-wrap" id="controlsWrap">
+        <div class="controls">
+          <button id="startBtn" class="btn primary">Start</button>
+          <button id="pauseBtn" class="btn">Pause</button>
+          <button id="restartBtn" class="btn">Restart</button>
+          <button id="muteBtn" class="btn">Mute</button>
+          <label>
+            Difficulty:
+            <select id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+          <button id="fsBtn" class="btn">Fullscreen</button>
+        </div>
       </div>
     </header>
 
@@ -77,6 +80,7 @@
     <footer class="footer">© Snake Game — HTML • CSS • JS</footer>
   </div>
 
+  <div class="side-art"></div>
   <script src="script.js"></script>
 </body>
 </html>
